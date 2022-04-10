@@ -2,27 +2,45 @@
 import './App.css';
 
 function App() {
-  var types = ["Andriod","Blackberry","iphone","Windows phone"]
-  var company = ["Samsung","HTC","Micromax","Apple"]
+  const data=[
+    {
+  heading :"Mobile Operating System",
+  types : ["Andriod","Blackberry","iphone","Windows phone"]
+    },
+   {
+    heading:"Mobile Manufactures",
+  types:["Samsung","HTC","Micromax","Apple"]
+   }
+  ]
   return (
     <div className="App">
-        <h1>Mobile Operating System</h1>        
-        {types.map((e) => {
-              return <MobileOS types={e}/>
-        })}
+             
+        {data.map((e) => (
+               <MobileOS  head={e.heading} data={
+               e.types.map((i)=>(
+               <MobileOS data={i}/>
+               ))}
+              />
+        
+               ))}
          
-         <h1>Mobile Manufactures</h1> 
-        {company.map((e) => {
-              return <MobileM company={e}/>
-        })}
+        {/* // {company.map((e) => {
+        //       return <MobileM company={e}/>
+        // })} */}
     </div>
   );
 }
 
-function MobileOS(prop){
-  return <li>{prop.types}</li>
+function MobileOS({head ,data}){
+  return(
+    <div>
+      <h1>{head}</h1>
+      <li>{data}</li>
+    </div>
+  )
 }
-function MobileM(prop){
-  return <li>{prop.company}</li>
-}
+// function MobileM(prop){
+//   return  <li>{prop.types}</li>
+// }
+
 export default App;
