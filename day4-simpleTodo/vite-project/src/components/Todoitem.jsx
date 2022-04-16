@@ -4,11 +4,11 @@ export const Todoitem = ({data,handleStatus})=>{
     return (
     <div className="todoitem">
   
-        {data.title}        - 
-       
-         {data.status ? "✓" :"x"}
+        {data.title}        
+
         
-        <button className="btn" onClick={()=>handleStatus(data.id)}></button>
+        <button onClick={()=>handleStatus(data.id)} 
+                className={data.status ?"green" : "skyblue"}></button>
         </div>
  
     )    
