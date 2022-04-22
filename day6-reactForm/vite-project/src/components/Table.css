@@ -1,0 +1,8 @@
+table,th,td{
+    border:1px solid black;
+}
+
+form{
+    margin:10px;
+    display:inline-block;
+}
