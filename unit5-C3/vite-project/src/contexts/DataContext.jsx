@@ -15,7 +15,7 @@ export const DataContextProvider = ({ children }) => {
       getData();
    }, []);
 
-   const [datacon, setDatacon] = useState({
+   const [data, setData] = useState({
       total: employees.length,
       terminated: 0,
       promoted: 0,
@@ -23,11 +23,11 @@ export const DataContextProvider = ({ children }) => {
    });
 
    const handleData = (state) => {
-      setDatacon({ ...datacon });
+      setDatacon({ ...data });
    };
 
    return (
-      <DataContext.Provider value={{ datacon, handleData }}>
+      <DataContext.Provider value={{ data, handleData }}>
          {children}
       </DataContext.Provider>
    );

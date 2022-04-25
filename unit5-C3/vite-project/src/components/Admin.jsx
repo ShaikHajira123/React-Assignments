@@ -21,7 +21,7 @@ export const Admin = () => {
    });
 
    const handleChange = (e) => {
-      // console.log(e.target);
+    
       const { name, value } = e.target;
 
       setForm({

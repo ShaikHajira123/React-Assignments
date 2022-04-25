@@ -27,7 +27,7 @@ export const Home = () => {
         getData();
      }, []);
      
-    const { datacon } = useContext(DataContext);
+    const { data } = useContext(DataContext);
     
   
     return (
@@ -39,13 +39,13 @@ export const Home = () => {
             Total Employees<span className="totalemp">{total.length}</span>
           </div>
           <div>
-            Total Terminated: <span className="total_terminated">{datacon.terminated}</span>
+            Total Terminated: <span className="total_terminated">{data.terminated}</span>
           </div>
           <div>
-            Total Promoted: <span className="total_promoted">{datacon.promoted}</span>
+            Total Promoted: <span className="total_promoted">{data.promoted}</span>
           </div>
           <div>
-            Total New: <span className="total_new">{datacon.total_new}</span>
+            Total New: <span className="total_new">{data.total_new}</span>
           </div>
         </div>
       </>
