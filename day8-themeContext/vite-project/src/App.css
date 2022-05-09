@@ -1,0 +1,24 @@
+.App {
+  margin:auto;
+  border:1px solid black;
+}
+.black{
+  background-color: rgb(28, 28, 28);
+  color:white;
+  width:100%;
+  height:800px;
+  border:1px solid black;
+}
+.pink{
+  background-color: pink;
+  color:black;
+  width:100%;
+  border:1px solid black;
+  height:800px;
+}
+button{
+  padding:20px;
+  background-color: rgb(202, 163, 238);
+  font-size: 20px;
+  margin-left:40%;
+}
