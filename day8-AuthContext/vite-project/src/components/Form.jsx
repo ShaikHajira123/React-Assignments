@@ -5,8 +5,8 @@ import { AuthContext } from '../contexts/AuthContext'
 
  export const Form = () => {
     const [form , setForm] =useState({
-        email:"",
-        password:"",
+        email:"eve.holt@reqres.in",
+        password:"cityslicka",
     })
     const {toggleAuth}  = useContext(AuthContext)
 
@@ -39,7 +39,7 @@ import { AuthContext } from '../contexts/AuthContext'
     // }
     
     const fetchData = async () => {
-        let fetched = await fetch("https://reqres.in/api/login", {
+        let data = await fetch("https://reqres.in/api/login", {
            method: "POST",
            headers: {
               "Content-Type": "application/json",
@@ -47,10 +47,9 @@ import { AuthContext } from '../contexts/AuthContext'
            body: JSON.stringify(form),
         });
   
-        fetched = await fetched.json();
-        console.log(fetched);
-        if (fetched.error !== "Missing email or username") {
-           toggleAuth(fetched.token);
+        data = await data.json();
+        if (data.error !== "Missing email or username") {
+           toggleAuth(data.token);
         }
      };
     return (

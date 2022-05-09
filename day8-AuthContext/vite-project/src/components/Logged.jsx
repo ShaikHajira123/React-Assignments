@@ -8,7 +8,7 @@ export const Logged = () => {
 
     return (
         <div>
-           <p>Status: {isAuth === "Login" ? "Logged Out" : "Logged In"}</p>
+           <p>Status: {isAuth === "false" ? "Logged Out" : "Logged In"}</p>
          <p>Token: {token}</p>
         </div>
     )
